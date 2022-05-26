@@ -1,0 +1,25 @@
+{
+  "name": "cypress-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run-api-test-heroku": "cypress run --spec cypress/integration/api-demo/api-test-heroku.spec.ts",
+    "run-api-test": "cypress run --spec cypress/integration/api-demo/api-test.spec.ts",
+    "run-ui-test": "cypress run --spec cypress/integration/ui-demo/**",
+    "cypress:open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^9.7.0",
+    "eslint": "^8.16.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "prettier": "^2.6.2",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}

@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "types": [
+            "node",
+            "cypress"
+        ],
+        "target": "es2019",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "outDir": "./dist",
+        "resolveJsonModule": true,
+        "strict": true
+    },
+}
+  
