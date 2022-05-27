@@ -3,5 +3,9 @@
       "ui-url" : "https://www.demoblaze.com/index.html",
       "api-url" : "https://reqres.in/",
       "api-url-heroku" : "https://api-nodejs-todolist.herokuapp.com"
+    },
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
     }
   }
