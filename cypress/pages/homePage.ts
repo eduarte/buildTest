@@ -1,9 +1,9 @@
 class HomePage {
-    loginLink = "#login2";
-    signUpLink = "#signin2";
-    logoutLink = "#logout2";
-    cartLink = "#cartur";
-    welcomeUserName = "#nameofuser";
+    private loginLink = "#login2";
+    private signUpLink = "#signin2";
+    private logoutLink = "#logout2";
+    private cartLink = "#cartur";
+    private  welcomeUserName = "#nameofuser";
 
     public clickLogin(){
         cy.get(this.loginLink).click();

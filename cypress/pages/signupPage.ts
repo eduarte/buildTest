@@ -1,21 +1,18 @@
 class SignUpPage {
-  userNameInput = "#sign-username";
-  passwordInput = "#sign-password";
-  signUpButton = ".btn-primary";
-  closeButton = ".btn-secondary";
+  private userNameInput = "#sign-username";
+  private passwordInput = "#sign-password";
+  private signUpButton = ".btn-primary";
 
   private typeUsername(username: string) {
-    let input = cy.get(this.userNameInput);
-    input.should("be.visible");
-    input.clear();
-    input.type(username, {log: false});
+    cy.get(this.userNameInput).should("be.visible");
+    cy.get(this.userNameInput).clear();
+    cy.get(this.userNameInput).type(username, {log: false});
   }
 
   private typePassword(password: string) {
-    let input = cy.get(this.passwordInput);
-    input.should("be.visible");
-    input.clear();
-    input.type(password, {log: false});
+    cy.get(this.passwordInput).should("be.visible");
+    cy.get(this.passwordInput).clear();
+    cy.get(this.passwordInput).type(password, {log: false});
   }
 
   public clickSignUpButton() {

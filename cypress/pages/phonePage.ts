@@ -1,6 +1,6 @@
 class PhonePage {
-    phoneTitleName = ".name";
-    addToCardButton = '.btn-success';
+    private phoneTitleName = ".name";
+    private addToCardButton = '.btn-success';
 
     public verifyPhoneName(phoneName: string){
         cy.get(this.phoneTitleName).should('be.visible').and('have.text', phoneName)

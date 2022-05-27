@@ -1,14 +1,20 @@
 const baseURL = Cypress.env("api-url");
 
-describe("API Tests", function () {
-  before(function () {});
+interface Persona {
+  id: number;
+  firstName: string;
+  lastName: string;
+  gender: string;
+  DOB: string;
+}
 
+describe("API Tests", function () {
   describe("Create User", function () {
     it("Should Create a User with Valid Data", function () {
       cy.fixture("apiUsers")
         .its("users")
         .then((userList) => {
-          userList.forEach((user) => {
+          userList.forEach((user: Persona) => {
             cy.request({
               method: "POST",
               url: `${baseURL}api/users`,
@@ -23,8 +29,6 @@ describe("API Tests", function () {
             });
           });
         });
-
-      
     });
   });
 
@@ -42,5 +46,4 @@ describe("API Tests", function () {
       });
     });
   });
- 
 });

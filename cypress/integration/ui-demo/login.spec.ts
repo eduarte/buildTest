@@ -1,9 +1,6 @@
-import { v4 as uuidv4 } from "uuid";
-
 import LoginPage from "../../pages/loginPage";
 import HomePage from "../../pages/homePage";
 
-const myuuid = uuidv4();
 describe("Sign Up Page", function () {
   beforeEach(function () {
     cy.fixture("user").then((user) => {
