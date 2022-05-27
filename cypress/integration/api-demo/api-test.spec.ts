@@ -1,7 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
 const baseURL = Cypress.env("api-url");
-const myuuid = uuidv4();
-let authorization = "";
 
 describe("API Tests", function () {
   before(function () {});

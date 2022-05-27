@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "run-api-test-heroku": "cypress run --spec cypress/integration/api-demo/api-test-heroku.spec.ts",
-    "run-api-test": "cypress run --spec cypress/integration/api-demo/api-test.spec.ts",
-    "run-ui-test": "cypress run --spec cypress/integration/ui-demo/**",
+    "api-test-heroku": "cypress run --spec cypress/integration/api-demo/api-test-heroku.spec.ts",
+    "api-test": "cypress run --spec cypress/integration/api-demo/api-test.spec.ts",
+    "ui-test": "cypress run --spec cypress/integration/ui-demo/**",
     "cypress:open": "cypress open"
   },
   "author": "",

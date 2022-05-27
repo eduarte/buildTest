@@ -1,19 +1,30 @@
 # Automated Test for Build
 
-This repo contains 2 different approaches of testing UI. and API
+The intention of the repo is to have a base framework using Cypress.IO as the automation framework. The framework has been created using TypeScript and in order to run it the user must install Node.JS (v16).
 
-#UI TEST
+In order to install the framework run the following commands:
 
-UI Test are targeted to demonstrate the ability to automate using Cypress and Page Object Model
+- `npm install`
 
-In order to run the test you can run it with 2 different commands:
+After all dependencies were installed you will be able to run the test.
 
-`npm cypress:open` and select the test under ui-demo
-`npm run run-ui-test` to run the test from the command line
+## UI TEST
 
-In the other hand, using Cypress to automate the API, I have added 2 different API to test different HTTP Methods such as POST, GET, PUT, DELETE
+UI Test are targeted to demonstrate the ability to automate using Cypress and Page Object Model to automate user interactions with the browser.
+
+Using the following command you can run the tests against the [demo site](https://www.demoblaze.com/index.html#)
+
+- `npm run cypress:open`
+  - This command will open Cypress CLI and you will be able to select individual files.
+- `npm run ui-test`
+  - This command will run the UI test from the command line without opening the browser (in headless mode)
 
 
-`npm run run-api-test` to run the test from the command line against `https://reqres.in/`
+## API Test
 
-`npm run run-api-test-heroku` to run the test from the command line against `https://api-nodejs-todolist.herokuapp.com`
+The API Tests are intended to test the API Layer using Cypress to test different HTTP Methods such as POST, GET, PUT, DELETE
+
+- `npm run api-test`
+  - to run the test from the command line against [reqres.in](https://reqres.in/)
+- `npm run api-test-heroku`
+  - to run the test from the command line against [TODO AP](https://api-nodejs-todolist.herokuapp.com)

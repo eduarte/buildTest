@@ -8,14 +8,14 @@ class LoginPage {
     let input = cy.get(this.userNameInput);
     input.should("be.visible");
     input.clear();
-    input.type(username);
+    input.type(username, {log: false});
   }
 
   private typePassword(password: string) {
     let input = cy.get(this.passwordInput);
     input.should("be.visible");
     input.clear();
-    input.type(password);
+    input.type(password, {log: false});
   }
 
   private clickLoginButton() {

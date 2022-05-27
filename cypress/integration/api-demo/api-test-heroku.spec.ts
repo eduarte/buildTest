@@ -2,13 +2,14 @@ import { v4 as uuidv4 } from "uuid";
 const baseURL = Cypress.env("api-url-heroku");
 const myuuid = uuidv4();
 let authorization = "";
+
 describe("User Tests", function () {
   before(function () {
     cy.fixture("user").then((user) => {
       this.user = user;
     });
   });
-
+  
   describe("POST", function () {
     it("Should Create a User with Valid Data", function () {
       cy.request({
