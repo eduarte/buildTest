@@ -5,10 +5,10 @@ on:
       - 'master'
 jobs:
   cypress-e2e-chrome81:
-    name: Run on Chrome 81
-    runs-on: ubuntu-18.04
-    container: cypress/browsers:node12.16.2-chrome81-ff75
-    steps:
+  name: Run on Chrome 81
+  runs-on: ubuntu-18.04
+  container: cypress/browsers:node12.16.2-chrome81-ff75
+  steps:
     - uses: actions/checkout@v2
     - name: Install a project with a clean slate
       run: |
@@ -16,14 +16,8 @@ jobs:
         $(npm bin)/cypress cache path
         $(npm bin)/cypress cache list
         $(npm bin)/cypress verify
-    - name: Run API Test Demo Site
-      run: npm run api-test
-      continue-on-error: true
-    - name: Run API Test TODO Site
-      run: npm run api-test-todo
-      continue-on-error: true
-    - name: Run UI Test
-      run: npm run ui-test
+    - name: Run Cypress tests
+      run: npm run test:chrome
       continue-on-error: true
     - name: Copy test execution videos
       run: |
