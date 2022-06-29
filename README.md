@@ -1,4 +1,4 @@
-# Automated Test for Build
+# Automated Test
 
 The intention of the repo is to have a base framework using Cypress.IO as the automation framework. The framework has been created using TypeScript and in order to run it the user must install Node.JS (v16).
 
